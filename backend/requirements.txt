@@ -1,0 +1,24 @@
+# --- Web / API ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.1
+websockets==14.1
+
+# --- Market data providers ---
+kiteconnect==5.0.1        # Kite Connect REST + KiteTicker websocket (real-time primary)
+pyotp==2.9.0              # TOTP for automated daily Kite access-token login
+httpx==0.28.1             # NSE fallback HTTP client (async, cookie jar)
+
+# --- Numerics ---
+numpy==2.2.1
+scipy==1.15.0             # norm.cdf/pdf for Black-Scholes/Black-76 (vectorized)
+
+# --- Storage / scheduling ---
+aiosqlite==0.20.0         # async SQLite (WAL) for time-series snapshots
+APScheduler==3.11.0       # 3/5/15-min snapshot cadence (replaces VBA OnTime macros)
+
+# --- Dev / test ---
+pytest==8.3.4
+pytest-asyncio==0.25.2
+openpyxl==3.1.5           # only for the one-off golden-data extraction script
